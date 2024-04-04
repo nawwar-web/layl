@@ -1,0 +1,345 @@
+/* Font */
+
+@font-face {
+  font-family: "Aileron";
+  src:
+    url("font/aileron/Aileron-Black.otf") format("opentype"),
+    url("font/aileron/Aileron-SemiBold.otf") format("opentype");
+}
+
+
+.noto-nastaliq urdu-dwn {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /*400-700*/
+  font-style: normal;
+}
+
+.noto-naskh arabic-khat{
+  font-family: "Noto Naskh Arabic", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /*400-700*>*/
+  font-style: normal;
+}
+
+
+/* Inntialise */
+
+*{
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* Couleurs principales */
+
+  --bleu-fonce: #263652;
+
+  --beige-clair: #C09D94;
+
+  /* Couleurs secondaires */
+
+  /* Couleurs d'accent */
+  
+
+}
+
+/* Utilisation des variables color: var(--gris-fonce); */
+
+body{
+  width:100% ;
+}
+
+
+header,.calcul{
+  height: max-content;
+  background-image: url("image/wall.jpg");
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  gap: 10px;
+
+  padding:30px 20px;
+
+  max-width: 100%;
+}
+
+.calcul{
+  background-image: url("image/wall2.jpg");
+
+}
+
+.image_ac{
+  width: 85vw;
+  height: 35vh;
+
+  border-radius: 10px;
+
+  background-image: url("image/fond_layl.jpg");
+  background-size: cover;
+  background-position: bottom;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.ls1{
+  width: 30px;
+  height: 30px;
+  background-color: var(--beige-clair);
+
+ animation: rotating 3s linear infinite;
+ transform: translateY(50%);
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.accueil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 35px;
+}
+
+.beige{
+  color: var(--beige-clair);
+}
+
+.titre h1{
+  color:var(--bleu-fonce);
+  font-size: 2.7rem;
+  font-family: "Noto Nastaliq Urdu", serif;
+  text-shadow: 7px 7px var(--beige-clair);
+  text-align: center;
+}
+
+.hadith{
+  background-color: rgba(116, 70, 98, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  width: 85vw;
+  height: max-content;
+
+  color: var(--bleu-fonce);
+  font-size: 0.9rem;
+
+}
+.hadith_ar{
+  text-align: end;
+  font-family: "Noto Naskh Arabic", serif;
+}
+
+.hadith_fr{
+  text-align: start;
+  font-size: 0.8rem;
+  font-family: "Noto Naskh Arabic", serif;
+}
+
+.ls2{
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  background: var(--bleu-fonce);
+  box-shadow: 7px 7px var(--beige-clair);
+}
+
+.sep1{
+  width: 30vw;
+  height: 1px;
+  background: var(--bleu-fonce);
+  box-shadow: 7px 7px var(--beige-clair);
+}
+
+
+.calcul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 45px;
+
+  height: max-content;
+}
+
+.calcul h2{
+  font-family: "Aileron";
+  text-transform: uppercase;
+  color: var(--bleu-fonce);
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.button{
+  background-color: #263652;
+  width:max-content;
+  height: 50px;
+  border: none;
+  box-shadow: 5px 5px var(--beige-clair);
+  color: #fff;
+  font-family: "Aileron";
+  text-transform: uppercase;
+  font-weight: 100;
+  left: 50%;
+  font-size: 0.9rem;
+
+  border-radius: 5px;
+  cursor: pointer;
+
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.heure{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fjr,.mgb{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items:start;
+
+
+  font-family: "Noto Naskh Arabic", serif;
+  text-transform: uppercase;
+  color: var(--bleu-fonce);
+}
+
+input{
+  background-color: #ffffff00;
+  width: 80vw;
+  height: 55px;
+  border: solid 1px var(--bleu-fonce);
+  border-radius: 15px;
+
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #263652a6;
+
+  cursor: pointer;
+}
+
+input:focus {
+  color: var(--beige-clair);
+  border: #C09D94;
+  cursor: auto;
+}
+input:active{
+  border: #C09D94;
+}
+
+.resultat {
+  display: none;
+  color: var(--bleu-fonce);
+  text-align: center;
+}
+
+.resultat_heure{
+  font-family: "Aileron";
+  font-size: 3rem;
+}
+
+.resultat_ph{
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1rem;
+}
+
+h6{
+  color:var(--bleu-fonce);
+  font-size: 2.7rem;
+  font-family: "Noto Nastaliq Urdu", serif;
+  text-shadow: 7px 7px var(--beige-clair);
+  text-align: center;
+}
+
+
+/*  responsive */
+
+@media screen and (min-width: 872px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:5vw;
+
+    padding: 0;
+  }
+
+  .titre h1{
+    font-size: 4rem;
+  }
+
+
+  .image_ac{
+    width: 40vw;
+    height: 85vh;
+    flex-direction: row-reverse;
+  }
+
+  .accueil{
+    width: 50vw;
+    gap: 50px;
+   height: 100vh; 
+  }
+
+  .hadith p{
+    width: 50vw;
+    font-size: 1.2rem;
+    height: max-content;
+  }
+
+  .hadith{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    width: max-content;
+  }
+
+  .hadith_fr p{
+    font-size: 1rem;
+  }
+
+  .ls1{
+    width: 50px;
+    height: 50px;
+    background-color: var(--beige-clair);
+  
+   animation: rotating 3s linear infinite;
+   transform: translate(30px);
+  }
+
+  .calcul h2{
+    font-size: 2rem;
+    width: 65vw;
+  }
+}
