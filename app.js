@@ -1,18 +1,15 @@
-console.log("LE JS est bien conecté 33333!!!!!")
-
 function formatterNombreDeuxCaracteres(nombre) {
-    // Si le nombre est inférieur à 10, ajoute un "0" devant
     if (nombre < 10) {
         return "0" + nombre.toString();
     } else {
-        return nombre.toString(); // Sinon, retourne simplement le nombre
+        return nombre.toString(); 
     }
 }
 
 function valider() {
-    // si la valeur du champ prenom est non vide
+
     if(document.form_calcul.maghrib_h.value != "" && document.form_calcul.fajr_h.value != "") {
-      // alors on envoie le formulaire
+
 
       let maghrib = document.getElementById("maghrib_h")
       let fajr = document.getElementById("fajr_h")
@@ -131,7 +128,6 @@ function valider() {
 
     }
     else {
-      // sinon on affiche un message
-      alert("Pas rempli");
+      alert("Veuillez compléter les deux heures");
     }
   }
